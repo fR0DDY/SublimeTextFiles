@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[VI primes;
+ 
+void sieve(int N) {
+    int M = (N - 1) / 2;
+    int i, j;
+    vector<bool> isPrime(M,1);
+    for(i=1; 4*i*i < N; ++i)
+        if(isPrime[i])
+        for(j=2*i*(i+1); j<M; j+=2*i+1)
+            isPrime[j] = 0;
+    primes.PB(2);
+    for(i=1; i < M; ++i)
+        if(isPrime[i]) primes.PB(2*i+1);
+}
+]]></content>
+	<tabTrigger>sieve</tabTrigger>
+    <scope>source.c, source.objc, source.c++, source.objc++</scope> 
+</snippet>
