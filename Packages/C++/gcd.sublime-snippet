@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+template< class T >
+T gcd(T a, T b) {
+	return (b == 0? a: gcd(b, a % b));
+}
+]]></content>
+	<tabTrigger>gcd</tabTrigger>
+    <scope>source.c, source.objc, source.c++, source.objc++</scope> 
+</snippet>
